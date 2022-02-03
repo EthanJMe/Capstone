@@ -1,10 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { Button, Linking, StyleSheet, Text, View } from 'react-native';
+import StackManager from './StackManager';
 
-function Headers() {
+function Headers({ navigation: { navigate } }) {
   return (    
     <View style={styles.container}>
-    <View style = {styles.header}><Text style = {styles.headerText}>Home</Text></View>
+    <View style = {styles.header}>
+        <Button title='Home' style = {styles.headerText} onPress={()=>  
+        navigate("home")}/>
+    </View>
     <StatusBar style="auto" />
     </View>);
 }
