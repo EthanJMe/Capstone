@@ -1,12 +1,15 @@
 import { NavigationContainer } from '@react-navigation/native';
 import Headers from "./navigation/Headers";
-import StackManager from './navigation/StackManager';
-export default function App() {
+import PageStack from './navigation/PageStack';
+ function App() {
+
   return (
-  <>
-  <Headers/>
-  <StackManager/>
+<>
+
+
+    <PageStack/>
   </>
   );
 }
 
+export default App

@@ -1,13 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { Button, Linking, StyleSheet, Text, View } from 'react-native';
-import StackManager from './StackManager';
 
-function Headers({ navigation: { navigate } }) {
+
+function Headers({}) {
   return (    
     <View style={styles.container}>
     <View style = {styles.header}>
-        <Button title='Home' style = {styles.headerText} onPress={()=>  
-        navigate("home")}/>
+    <Button title='Account Types' style = {styles.headerText} onPress={()=> navigate("accountTypes")}/>
+    <Button title='Home' style = {styles.headerText} onPress={()=> navigate("home")}/>
+    <Button title='Fees And Charges' style = {styles.headerText} onPress={()=> navigate("feesAndCharges")}/>
     </View>
     <StatusBar style="auto" />
     </View>);
@@ -16,12 +17,14 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: '#fff',
-      alignItems: 'center',
+     
       
     },
     header:{
       backgroundColor: "#34C2FF",
       paddingTop: 50,
+        display: 'flex'
+        
         
     },
     headerText: {
