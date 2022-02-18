@@ -1,4 +1,3 @@
-import React from 'react';
 import { Text, Button } from 'react-native';
 import { List } from 'react-native-paper';
 
@@ -9,10 +8,14 @@ function FeesAndCharges({navigation}) {
   const HomeHandler = () => {
     navigation.navigate('Home')
   }
+  const DictionaryHandler = () => {
+    navigation.navigate('Dictionary')
+  }
   return (
     <>
-    <Button title='Account Types' onPress={AccountTypesHandler}/>
+  <Button title='Account Types' onPress={AccountTypesHandler}/>
   <Button title='Home' onPress={HomeHandler}/>
+  <Button title='Dictionary' onPress={DictionaryHandler}/>
   <List.Accordion title="Overdraft">
         <List.Item title="Checking overdraft is $30" />
       </List.Accordion>

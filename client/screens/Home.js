@@ -2,10 +2,7 @@ import { useState } from 'react';
 import { Text, Button, StyleSheet, TextInput, } from 'react-native';
 import { Alert, Modal, Pressable, View } from "react-native";
 
-  /*1. create state for each field
-    2. create function to do math
-    3. display result of math function below calculate button
-    */
+
 function Home({navigation}) {
   const Calculator = (deposit, myInterest, yearsInAccount) => {
     parseInt(deposit)
@@ -22,6 +19,9 @@ function Home({navigation}) {
   const FeesAndChargesHandler = () => {
     navigation.navigate('FeesAndCharges')
   }
+  const DictionaryHandler = () => {
+    navigation.navigate('Dictionary')
+  }
 
   const [initialDeposit, setInitialDeposit] = useState('')
   const [interest, setInterest] = useState('')
@@ -31,6 +31,7 @@ function Home({navigation}) {
   <>
   <Button title='Account Types' onPress={AccountTypesHandler}/>
   <Button title='Fees And Charges' onPress={FeesAndChargesHandler}/>
+  <Button title='Dictionary' onPress={DictionaryHandler}/>
   <Text style = {styles.Header}>Welcome to our interest calculator</Text>
   <Text style ={styles.SmallHeader}>Initial Deposit</Text>
   <TextInput keyboardType='numeric' style={styles.input} onChangeText={newText => setInitialDeposit(newText)}/>
