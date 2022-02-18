@@ -1,4 +1,3 @@
-import React from 'react';
 import { Text, Button } from 'react-native';
 import { List } from 'react-native-paper';
 
@@ -11,8 +10,12 @@ function AccountTypes({navigation}) {
   const HomeHandler = () => {
     navigation.navigate('Home')
   }
+  const DictionaryHandler = () => {
+    navigation.navigate('Dictionary')
+  }
   return (
     <>
+  <Button title='Dictionary' onPress={DictionaryHandler}/>
   <Button title='Fees And Charges' onPress={FeesAndChargesHandler}/>
   <Button title='Home' onPress={HomeHandler}/>
   <List.Accordion title="Extreme Checking">

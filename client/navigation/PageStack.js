@@ -3,6 +3,7 @@ import { createAppContainer } from "react-navigation"
 import Home from "../screens/Home";
 import FeesAndCharges from "../screens/FeesAndCharges";
 import AccountTypes from "../screens/AccountTypes";
+import Dictionary from "../screens/Dictionary";
 
 const screens ={
 Home: {
@@ -13,6 +14,9 @@ FeesAndCharges: {
 },
 AccountTypes: {
     screen: AccountTypes
+},
+Dictionary: {
+    screen: Dictionary
 }
 }
 const PageStack = createStackNavigator(screens);
