@@ -10,7 +10,7 @@ export const getUsers = async (req, res) => {
 }
 export const addUsers = async (req, res) => {
     const user = req.body;
-    const newUserInfo = new Users(...user)
+    const newUserInfo = new Users(user)
     try {
         await newUserInfo.save();
 
