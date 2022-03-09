@@ -1,5 +1,7 @@
-import { Text, Button } from 'react-native';
+import { Text, Button} from 'react-native';
 import { List } from 'react-native-paper';
+import {useEffect} from 'react'
+import { getData } from '../API';
 
 function AccountTypes({navigation}) {
  const blueFederalArray = [{ 
