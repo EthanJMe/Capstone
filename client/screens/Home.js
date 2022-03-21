@@ -8,9 +8,9 @@ function Home({navigation}) {
     parseInt(deposit)
     parseInt(myInterest)
     parseInt(yearsInAccount)
-    const product = deposit * myInterest/100*yearsInAccount
+    const product = deposit*myInterest/100*yearsInAccount
     return (
-      <Text>You would have {product} dollars</Text>
+      <Text>You would have {product} dollars earned from interest</Text>
     )
   }
   const AccountTypesHandler = () => {
